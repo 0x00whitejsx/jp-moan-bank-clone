@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(8, 0, 39);
+}
+body{
+    background-image: url(bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100dvh;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.side {
+    height: 100%;
+    width: 30%;
+    background: url("./random-shapes.svg");
+    background-color: rgb(45, 3, 145);
+    background-repeat: repeat;
+    background-size: contain;
+
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    height: 420px;
+    width: 550px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #ccc;
+
+}
+h1{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+input {
+    padding:  0.5rem  1rem;
+    border: 1px solid gray;
+    width: 100%;
+    border-radius: 2px;
+    margin: 1px;
+    
+}
+ label{
+}
+button {
+    background-color:  rgb(45, 3, 145);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 14;
+}
+
+a {
+    color: #4a474d;
+    text-decoration: none;
+}
+.input-class{
+    margin-top: 1rem;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JP Morgan</title>
+    <style>
+        body{
+        display: flex;
+        justify-content: center;
+        /* align-content: center; */
+      }
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 500px;
+        }
+        .card h1 {
+            margin-bottom: 20px;
+        }
+        .input-class {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .input-class label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-class input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .input-class input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        .card button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .card button a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .card a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section class="side">
+        <!-- Additional content can go here -->
+    </section>
+    <section style="width: 50%; display: flex; justify-content: center; align-items: center;">
+        <div class="card1">
+            <h1>Login</h1>
+            <p>Please enter your email and password to log in.</p>
+            <div>
+                <div class="input-class">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="input-class">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div class="error-message" id="error-message">
+                    Please enter a valid email and password.
+                </div>
+                <div>
+                    <button onclick="login()">Login</button>
+                </div>
+                <div style="margin-top: 10px;">
+                    <p>Don't have an account? <a href="signup.html">Create one</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            if (email === "" || password === "") {
+                errorMessage.style.display = 'block';
+            } else {
+                errorMessage.style.display = 'none';
+                window.location.href = 'passcode.html';
+            }
+        }
+    </script>
+</body>
+</html>
